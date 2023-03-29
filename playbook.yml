@@ -1,0 +1,13 @@
+---
+ - name: Deploy Windows Server 2019
+   hosts: localhost
+   connection: local
+   roles: 
+     - create_vm_windows_azure 
+
+   vars_prompt:
+     - name: azure_user 
+       prompt: "Enter local administrator"
+     - name: password
+       prompt: "Enter local administrator password"
+...

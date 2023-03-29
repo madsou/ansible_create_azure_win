@@ -1,0 +1,13 @@
+---
+  - name: Create a network interface
+    azure_rm_networkinterface:
+      name: nic
+      resource_group: myResourceGroup
+      virtual_network: vNet
+      subnet_name: subnet
+      security_group: networkSecurityGroup
+      ip_configurations:
+        - name: default
+          public_ip_address_name: pip
+          primary: True
+...
